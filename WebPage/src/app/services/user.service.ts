@@ -10,17 +10,14 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  // Obtener todos los usuarios
   getAllUsuarios(): Observable<any> {
     return this.http.get(`${this.apiUrl}/usuarios`);
   }
 
-  // Crear usuario
   createUsuario(usuario: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/usuarios`, usuario);
   }
 
-  // Autenticación
   login(correo: string, contrasena: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, { correo, contrasena });
   }
