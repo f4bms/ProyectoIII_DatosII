@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-register',
-  standalone: true,
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  imports: [FormsModule]
+  imports: [
+    FormsModule
+  ],
+  standalone: true
 })
 export class RegisterComponent {
   usuario = {
@@ -17,8 +20,18 @@ export class RegisterComponent {
     telefono: ''
   };
 
+  constructor(private userService: UserService) {}
+
   onSubmit() {
-    console.log('Usuario registrado:', this.usuario);
-    //enviar los datos al backend
+    this.userService.createUsuario(this.usuario).subscribe(
+      response => {
+        console.log('Usuario creado:', response);
+        alert('Usuario registrado exitosamente.');
+      },
+      error => {
+        console.error('Error al registrar usuario:', error);
+        alert('Error al registrar usuario.');
+      }
+    );
   }
 }

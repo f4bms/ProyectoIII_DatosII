@@ -1,14 +1,15 @@
 import {FormsModule} from '@angular/forms';
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  standalone: true,
+  styleUrls: ['./login.component.css'],
   imports: [
     FormsModule
   ],
-  styleUrls: ['./login.component.css']
+  standalone: true
 })
 export class LoginComponent {
   loginData = {
@@ -16,8 +17,18 @@ export class LoginComponent {
     contrasena: ''
   };
 
+  constructor(private userService: UserService) {}
+
   onLogin() {
-    console.log('Datos de inicio de sesión:', this.loginData);
-    // Enviar los datos al backend para autenticación
+    this.userService.login(this.loginData.correo, this.loginData.contrasena).subscribe(
+      response => {
+        console.log('Inicio de sesión exitoso:', response);
+        alert('Bienvenido, ' + response.usuario[1]); // Supone que el nombre completo está en la posición 1
+      },
+      error => {
+        console.error('Error al iniciar sesión:', error);
+        alert('Correo o contraseña incorrectos.');
+      }
+    );
   }
 }

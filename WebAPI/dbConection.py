@@ -48,3 +48,11 @@ def deleteUsuario(id):
     mycursor.execute("DELETE FROM usuarios WHERE id = %s", (id,))
     mydb.commit()
     return mycursor.rowcount
+
+# Obtener usuario por correo y contraseña
+def getUsuarioByCorreoYContrasena(correo, contrasena):
+    sql = "SELECT * FROM usuarios WHERE correo = %s AND contrasena = %s"
+    val = (correo, contrasena)
+    mycursor.execute(sql, val)
+    res = mycursor.fetchone()
+    return simplejson.dumps(res)

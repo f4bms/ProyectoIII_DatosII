@@ -5,10 +5,11 @@ import { importProvidersFrom } from '@angular/core';
 import { routes } from './app/app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(BrowserModule, FormsModule)
+    importProvidersFrom(BrowserModule, FormsModule,HttpClientModule)
   ]
 }).catch(err => console.error(err));
