@@ -36,7 +36,7 @@ def cargarUsuarios():
     mydb.commit()
 
 
-# Ejecuta esta función para poblar la tabla
+
 if __name__ == "__main__":
     cargarUsuarios()
     print("Usuarios cargados exitosamente.")
