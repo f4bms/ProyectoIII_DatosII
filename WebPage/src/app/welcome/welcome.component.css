@@ -1,0 +1,22 @@
+.welcome-container {
+  background: linear-gradient(to bottom right, #1e90ff, #2e2b5f);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin: 50px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #add8e6;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}

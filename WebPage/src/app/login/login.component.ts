@@ -1,6 +1,7 @@
 import {FormsModule} from '@angular/forms';
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,13 +18,14 @@ export class LoginComponent {
     contrasena: ''
   };
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   onLogin() {
     this.userService.login(this.loginData.correo, this.loginData.contrasena).subscribe(
       response => {
         console.log('Inicio de sesión exitoso:', response);
-        alert('Bienvenido, ' + response.usuario[1]); // Supone que el nombre completo está en la posición 1
+        alert('Bienvenido, ' + response.usuario[1]);
+        this.router.navigate(['/welcome']);
       },
       error => {
         console.error('Error al iniciar sesión:', error);

@@ -10,6 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(BrowserModule, FormsModule,HttpClientModule)
+    importProvidersFrom(BrowserModule, FormsModule, HttpClientModule)
   ]
 }).catch(err => console.error(err));
