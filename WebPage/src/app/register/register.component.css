@@ -1,0 +1,60 @@
+.register-container {
+  background: linear-gradient(to bottom right, #1e90ff, #2e2b5f);
+  color: white;
+  padding: 30px; /* Reduce un poco el padding */
+  border-radius: 10px; /* Reduce la curvatura de las esquinas */
+  max-width: 500px; /* Reduce el ancho del formulario */
+  margin: auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+
+  opacity: 0; /* Inicia invisible */
+  transform: translateY(30px); /* Desplazado hacia abajo */
+  animation: fadeIn 1s ease-out forwards; /* Animación suave */
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px; /* Ajusta el tamaño del título */
+  margin-bottom: 15px;
+  color: #add8e6;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+input {
+  width: 95%; /* Mantiene el campo a lo ancho del formulario */
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px; /* Reduce la curvatura de las entradas */
+  font-size: 14px;
+}
+
+button {
+  width: 100%; /* Botón a lo ancho del formulario */
+  padding: 12px; /* Tamaño del botón */
+  background-color: #483d8b;
+  color: white;
+  font-size: 16px; /* Tamaño del texto del botón */
+  border: none;
+  border-radius: 5px; /* Reduce la curvatura del botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a5acd;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Aparece completamente */
+    transform: translateY(0); /* Regresa a su posición original */
+  }
+}
