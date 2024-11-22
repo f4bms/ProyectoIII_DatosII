@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://orbis-pictus.jp/img/article/utsubo-main.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(6px); /* Ajusta el nivel de desenfoque */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}

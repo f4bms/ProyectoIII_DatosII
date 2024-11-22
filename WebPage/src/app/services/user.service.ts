@@ -39,8 +39,6 @@ export class UserService {
       throw error;
     }
 
-    console.log({ correo, contrasena })
-
     
   }
 }
