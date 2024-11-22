@@ -52,20 +52,6 @@ def decrypt(data_encrypted):
     return simplejson.loads(item)
 
 
-# Obtener todos los usuarios
-@app.route('/usuarios', methods=['GET'])
-def get_all_usuarios():
-    mycursor.execute("SELECT * FROM usuarios")
-    res = mycursor.fetchall()
-    return jsonify(res)
-
-# Obtener usuario por ID
-@app.route('/usuarios/<int:id>', methods=['GET'])
-def get_usuario_by_id(id):
-    mycursor.execute("SELECT * FROM usuarios WHERE id = %s", (id,))
-    res = mycursor.fetchone()
-    return jsonify(res)
-
 # Crear usuario
 @app.route('/usuarios', methods=['POST'])
 def create_usuario():
@@ -77,27 +63,6 @@ def create_usuario():
     mycursor.execute(sql, val)
     mydb.commit()
     return jsonify({"id": mycursor.lastrowid})
-
-# Actualizar usuario
-@app.route('/usuarios/<int:id>', methods=['PUT'])
-def update_usuario(id):
-    item = request.json
-    sql = """
-        UPDATE usuarios 
-        SET nombre_completo = %s, nombre_usuario = %s, correo = %s, contrasena = %s, telefono = %s 
-        WHERE id = %s
-    """
-    val = (item["nombre_completo"], item["nombre_usuario"], item["correo"], item["contrasena"], item["telefono"], id)
-    mycursor.execute(sql, val)
-    mydb.commit()
-    return jsonify({"rows_affected": mycursor.rowcount})
-
-# Eliminar usuario
-@app.route('/usuarios/<int:id>', methods=['DELETE'])
-def delete_usuario(id):
-    mycursor.execute("DELETE FROM usuarios WHERE id = %s", (id,))
-    mydb.commit()
-    return jsonify({"rows_affected": mycursor.rowcount})
 
 # Autenticación de usuario
 @app.route('/login', methods=['POST'])
