@@ -8,7 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f8753b1-d7cf-4dab-a5c5-b0424b185a72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../WebPage/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../WebPage/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MiPetSoftware_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MiPetSoftware_Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebPage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebPage/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebPage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WebPage/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Flask server.Flask (Servidor.py).executor": "Run",
+    "Flask server.Flask (Servidor.py).executor": "Debug",
     "Flask server.Flask.executor": "Debug",
     "Python.Run.executor": "Debug",
     "Python.Servidor.executor": "Debug",
@@ -63,14 +68,14 @@
     "Python.pydevd.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Meli",
+    "git-widget-placeholder": "jwe__implementation",
     "last_opened_file_path": "C:/Users/melis/OneDrive/Desktop/Datos II/ProyectoIII_DatosII/WebAPI",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.tools",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -88,7 +93,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -113,7 +117,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (WebAPI) (2)" />
+      <option name="SDK_NAME" value="Python 3.12 (proyecto2)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -136,9 +140,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (WebAPI)" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -175,6 +178,9 @@
       <workItem from="1731471807096" duration="2076000" />
       <workItem from="1731513024868" duration="32000" />
       <workItem from="1731897423958" duration="6646000" />
+      <workItem from="1732133307173" duration="1189000" />
+      <workItem from="1732134528170" duration="3632000" />
+      <workItem from="1732298556570" duration="3043000" />
     </task>
     <servers />
   </component>
@@ -183,7 +189,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebAPI$llenarTablas.coverage" NAME="llenarTablas Coverage Results" MODIFIED="1731469648006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WebAPI$Flask__Servidor_py_.coverage" NAME="Flask (Servidor.py) Coverage Results" MODIFIED="1731904143445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/WebAPI$Flask__Servidor_py_.coverage" NAME="Flask (Servidor.py) Coverage Results" MODIFIED="1732304061744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/WebAPI$Servidor.coverage" NAME="Servidor Coverage Results" MODIFIED="1731469566244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WebAPI$Run.coverage" NAME="Run Coverage Results" MODIFIED="1731468593346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>

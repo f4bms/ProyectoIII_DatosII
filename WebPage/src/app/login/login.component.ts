@@ -20,14 +20,14 @@ export class LoginComponent {
 
   constructor(private userService: UserService, private router: Router) {}
 
-  onLogin() {
-    this.userService.login(this.loginData.correo, this.loginData.contrasena).subscribe(
-      response => {
+  async onLogin() {
+    (await this.userService.login(this.loginData.correo, this.loginData.contrasena)).subscribe(
+      (      response: { usuario: string[]; }) => {
         console.log('Inicio de sesión exitoso:', response);
         alert('Bienvenido, ' + response.usuario[1]);
         this.router.navigate(['/welcome']);
       },
-      error => {
+      (      error: any) => {
         console.error('Error al iniciar sesión:', error);
         alert('Correo o contraseña incorrectos.');
       }

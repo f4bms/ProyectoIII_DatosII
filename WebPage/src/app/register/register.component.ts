@@ -23,14 +23,14 @@ export class RegisterComponent {
 
   constructor(private userService: UserService, private router: Router) {}
 
-  onSubmit() {
-    this.userService.createUsuario(this.usuario).subscribe(
-      response => {
+  async onSubmit() {
+    await (await this.userService.createUsuario(this.usuario)).subscribe(
+      (      response: any) => {
         console.log('Usuario creado:', response);
         alert('Usuario registrado exitosamente.');
         this.router.navigate(['/welcome']);
       },
-      error => {
+      (      error: any) => {
         console.error('Error al registrar usuario:', error);
         alert('Error al registrar usuario.');
       }
